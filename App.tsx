@@ -1,10 +1,11 @@
 import { Image, StyleSheet, Text, View } from 'react-native';
+import ImageViewer from './components/ImageViewer';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text style={{ color: '#fff'}}>Hello world!</Text>
-      <Image source={require('./assets/favicon.png')} style={styles.image}/>
+      <ImageViewer placeholderImageSource={require('./assets/favicon.png')}/>
     </View>
   );
 }
@@ -15,10 +16,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#25292e',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  image: {
-    width: 30,
-    height: 30,
-    borderRadius: 18,
   },
 });
